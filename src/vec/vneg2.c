@@ -2,11 +2,10 @@
 
 #include <bari.h>
 
-bari_vec3 bari_neg3(bari_vec3 a)
+bari_vec2 bari_vneg2(bari_vec2 a)
 {
-	bari_vec3 r;
+	bari_vec2 r;
 	r.x = -a.x;
 	r.y = -a.y;
-	r.z = -a.z;
 	return r;
 }

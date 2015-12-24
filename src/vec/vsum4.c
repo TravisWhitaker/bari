@@ -2,10 +2,12 @@
 
 #include <bari.h>
 
-bari_vec2 bari_add2(bari_vec2 a, bari_vec2 b)
+bari_vec4 bari_vsum4(bari_vec4 a, bari_vec4 b)
 {
-	bari_vec2 r;
+	bari_vec4 r;
 	r.x = a.x + b.x;
 	r.y = a.y + b.y;
+	r.z = a.z + b.z;
+	r.w = a.w + b.w;
 	return r;
 }

@@ -2,7 +2,7 @@
 
 #include <bari.h>
 
-bari_vec4 bari_neg4(bari_vec4 a)
+bari_vec4 bari_vneg4(bari_vec4 a)
 {
 	bari_vec4 r;
 	r.x = -a.x;

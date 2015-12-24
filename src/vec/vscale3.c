@@ -2,12 +2,11 @@
 
 #include <bari.h>
 
-bari_vec4 bari_scale4(bari_vec4 a, float b)
+bari_vec3 bari_vscale3(bari_vec3 a, float b)
 {
-	bari_vec4 r;
+	bari_vec3 r;
 	r.x = b * a.x;
 	r.y = b * a.y;
 	r.z = b * a.z;
-	r.w = b * a.w;
 	return r;
 }
