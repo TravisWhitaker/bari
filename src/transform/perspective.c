@@ -12,7 +12,7 @@ bari_mat4 bari_perspective(float fovy, float aspect, float near, float far)
 	r.xx = 1 / (aspect * t);
 	r.yy = 1 / t;
 	r.zz = (-(far + near)) / (far - near);
-	r.zw = 1 / ((1 / near) - (1 / far));
+	r.zw = 1 / ((1 / far) - (1 / near));
 	r.wz = -1;
 	return r;
 }
