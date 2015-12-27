@@ -6,8 +6,8 @@ INSTALL = $(shell which 'install')
 
 CFLAGS = -Wall -Wextra -Werror -pedantic -O2 -pipe -march=native
 
-SOURCES = $(wildcard src/*/*)
-OBJECTS = $(patsubst %.c,%.o,$(SOURCES))
+SOURCES = $(sort $(wildcard src/*/*))
+OBJECTS = $(sort $(patsubst %.c,%.o,$(SOURCES)))
 
 INCLUDES = include/
 INCLUDE = $(addprefix -I./,$(INCLUDES))
@@ -21,9 +21,9 @@ INCTARGET = /usr/local/include/
 TESTSRC = tests/test.c
 TESTBIN = tests/test
 
-all: clean static shared test
+all: clean static
 
-.PHONY: all static shared install clean
+.PHONY: all static install clean
 
 clean:
 	rm -rf $(OBJECTS)
