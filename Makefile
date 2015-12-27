@@ -32,8 +32,8 @@ clean:
 	rm -rf $(TESTBIN)
 
 install: all
-	$(INSTALL) $(STATICLIB) $(addsuffix $(STATICLIB) $(LIBTARGET))
-	$(INSTALL) $(INCLUDES) $(addsuffix $(INCLUDES) $(INCTARGET))
+	$(INSTALL) $(STATICLIB) $(addsuffix $(STATICLIB),$(LIBTARGET))
+	$(INSTALL) $(INCLUDES) $(addsuffix $(INCLUDES),$(INCTARGET))
 
 test: $(TESTBIN)
 
