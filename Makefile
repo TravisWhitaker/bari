@@ -21,7 +21,7 @@ INCTARGET = /usr/local/include/
 TESTSRC = tests/test.c
 TESTBIN = tests/test
 
-all: clean static
+all: clean static test
 
 .PHONY: all static install clean
 
