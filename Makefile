@@ -29,6 +29,7 @@ clean:
 	rm -rf $(OBJECTS)
 	rm -rf $(STATICLIB)
 	rm -rf $(SHAREDLIB)
+	rm -rf $(TESTBIN)
 
 install: all
 	$(INSTALL) $(STATICLIB) $(addsuffix $(STATICLIB) $(LIBTARGET))
