@@ -18,8 +18,8 @@ SHAREDLIB = libbari.so
 LIBTARGET = /usr/local/lib/
 INCTARGET = /usr/local/include/
 
-TESTSRC = tests/test.c
-TESTBIN = tests/test
+TESTSRC = $(sort $(wildcard tests/*))
+TESTBIN = $(sort $(basename $(TESTSRC)))
 
 all: clean static test
 
@@ -35,12 +35,14 @@ install: all
 	$(INSTALL) $(STATICLIB) $(addsuffix $(STATICLIB) $(LIBTARGET))
 	$(INSTALL) $(INCLUDES) $(addsuffix $(INCLUDES) $(INCTARGET))
 
-test: clean static
-	$(CC) -o $(TESTBIN) $(INCLUDE) $(TESTSRC) $(STATICLIB)
-	./tests/test
+test: $(TESTBIN)
 
 static: $(OBJECTS)
 	ar rvs $(STATICLIB) $(OBJECTS)
 
 $(OBJECTS): %.o: %.c
 	$(CC) -c $(CFLAGS) $(INCLUDE) -fPIC -o $@ $<
+
+$(TESTBIN): %: %.c
+	$(CC) $(CFLAGS) $(INCLUDE) -o $@ $<
+	./$(TESTBIN)

@@ -4,7 +4,7 @@
 
 #include <bari.h>
 
-int bari_struct_pack_align_test()
+int main()
 {
 	printf("Running struct packing and alignment test... ");
 
@@ -89,29 +89,5 @@ int bari_struct_pack_align_test()
 	}
 
 	printf("OK\n");
-	return 0;
-}
-
-int (*tests[])() = {&bari_struct_pack_align_test, NULL};
-
-int main()
-{
-	printf("Bari Test Suite\n");
-	unsigned int t = 0;
-	while(1)
-	{
-		if(tests[t] == NULL)
-		{
-			break;
-		}
-		else if(tests[t]() != 0)
-		{
-			printf("Some tests failed!\n");
-			return 0;
-		}
-		t++;
-	}
-
-	printf("All tests passed.\n");
 	return 0;
 }
