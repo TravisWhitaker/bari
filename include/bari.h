@@ -137,4 +137,53 @@ bari_vec2 bari_vsum2(bari_vec2 a, bari_vec2 b);
 bari_vec3 bari_vsum3(bari_vec3 a, bari_vec3 b);
 bari_vec4 bari_vsum4(bari_vec4 a, bari_vec4 b);
 
+// Matrix functions:
+
+float bari_det2(bari_mat2 a);
+float bari_det3(bari_mat3 a);
+float bari_det4(bari_mat4 a);
+
+bari_mat2 bari_mneg2(bari_mat2 a);
+bari_mat3 bari_mneg3(bari_mat3 a);
+bari_mat4 bari_mneg4(bari_mat4 a);
+
+bari_mat2 bari_mprod2(bari_mat2 a, bari_mat2 b);
+bari_mat3 bari_mprod3(bari_mat3 a, bari_mat3 b);
+bari_mat4 bari_mprod4(bari_mat4 a, bari_mat4 b);
+
+bari_mat2 bari_mscale2(bari_mat2 a, float b);
+bari_mat3 bari_mscale3(bari_mat3 a, float b);
+bari_mat4 bari_mscale4(bari_mat4 a, float b);
+
+bari_mat2 bari_msub2(bari_mat2 a, bari_mat2 b);
+bari_mat3 bari_msub3(bari_mat3 a, bari_mat3 b);
+bari_mat4 bari_msub4(bari_mat4 a, bari_mat4 b);
+
+bari_mat2 bari_msum2(bari_mat2 a, bari_mat2 b);
+bari_mat3 bari_msub3(bari_mat3 a, bari_mat3 b);
+bari_mat4 bari_msub4(bari_mat4 a, bari_mat4 b);
+
+bari_vec2 bari_vprod2(bari_mat2 m, bari_vec2 v);
+bari_vec3 bari_vprod3(bari_mat3 m, bari_vec3 v);
+bari_vec4 bari_vprod4(bari_mat4 m, bari_vec4 v);
+
+// Transformation matrices:
+
+bari_mat4 bari_infinite_perspective(float fovy, float aspect, float near);
+
+bari_mat4 bari_lookat(bari_vec3 eye, bari_vec3 center, bari_vec3 up);
+
+bari_mat4 bari_ortho(float left, float right, float bottom, float top, float near, float far);
+
+bari_mat4 bari_perspective(float fovy, float aspect, float near, float far);
+
+bari_mat4 bari_rotate(float phi, float theta, float psi);
+bari_mat4 bari_rotate_x(float phi);
+bari_mat4 bari_rotate_y(float theta);
+bari_mat4 bari_rotate_z(float psi);
+
+bari_mat4 bari_scale(float mx, float my, float mz);
+
+bari_mat4 bari_translate(float dx, float dy, float dz);
+
 #endif
