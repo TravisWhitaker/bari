@@ -67,22 +67,22 @@ typedef struct
 
 // Zeros:
 
-const bari_vec2 bari_vec2_zero = {0, 0};
-const bari_vec3 bari_vec3_zero = {0, 0, 0};
-const bari_vec4 bari_vec4_zero = {0, 0, 0, 0};
+static const bari_vec2 bari_vec2_zero = {0, 0};
+static const bari_vec3 bari_vec3_zero = {0, 0, 0};
+static const bari_vec4 bari_vec4_zero = {0, 0, 0, 0};
 
-const bari_mat2 bari_mat2_zero = {0, 0, 0, 0};
-const bari_mat3 bari_mat3_zero = {0, 0, 0, 0, 0, 0, 0, 0, 0};
-const bari_mat4 bari_mat4_zero = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+static const bari_mat2 bari_mat2_zero = {0, 0, 0, 0};
+static const bari_mat3 bari_mat3_zero = {0, 0, 0, 0, 0, 0, 0, 0, 0};
+static const bari_mat4 bari_mat4_zero = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
 // Identity matrices:
 
-const bari_mat2 bari_mat2_id = {1, 0,
+static const bari_mat2 bari_mat2_id = {1, 0,
                                 0, 1};
-const bari_mat3 bari_mat3_id = {1, 0, 0,
+static const bari_mat3 bari_mat3_id = {1, 0, 0,
                                 0, 1, 0,
                                 0, 0, 1};
-const bari_mat4 bari_mat4_id = {1, 0, 0, 0,
+static const bari_mat4 bari_mat4_id = {1, 0, 0, 0,
                                 0, 1, 0, 0,
                                 0, 0, 1, 0,
                                 0, 0, 0, 1};
@@ -185,5 +185,15 @@ bari_mat4 bari_rotate_z(float psi);
 bari_mat4 bari_scale(float mx, float my, float mz);
 
 bari_mat4 bari_translate(float dx, float dy, float dz);
+
+// Debugging functions:
+
+void bari_vec2_print(bari_vec2 a);
+void bari_vec3_print(bari_vec3 a);
+void bari_vec4_print(bari_vec4 a);
+
+void bari_mat2_print(bari_mat2 a);
+void bari_mat3_print(bari_mat3 a);
+void bari_mat4_print(bari_mat4 a);
 
 #endif
