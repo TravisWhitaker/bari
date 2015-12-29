@@ -11,12 +11,13 @@ OBJECTS = $(sort $(patsubst %.c,%.o,$(SOURCES)))
 
 INCLUDES = include/
 INCLUDE = $(addprefix -I./,$(INCLUDES))
+HEADERS = $(sort $(wildcard include/*))
 
 STATICLIB = libbari.a
 SHAREDLIB = libbari.so
 
 LIBTARGET = /usr/local/lib/
-INCTARGET = /usr/local/include/
+INCTARGET = /usr/local/
 
 TESTSRC = $(sort $(wildcard tests/*))
 TESTBIN = $(sort $(basename $(TESTSRC)))
@@ -33,7 +34,7 @@ clean:
 
 install: all
 	$(INSTALL) $(STATICLIB) $(addsuffix $(STATICLIB),$(LIBTARGET))
-	$(INSTALL) $(INCLUDES) $(addsuffix $(INCLUDES),$(INCTARGET))
+	$(INSTALL) $(HEADERS) $(addsuffix $(HEADERS),$(INCTARGET))
 
 test: $(TESTBIN)
 
