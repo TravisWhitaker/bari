@@ -16,7 +16,7 @@ bari_mat4 bari_lookat(bari_vec3 eye, bari_vec3 center, bari_vec3 up)
 	r.yy = ya.y;
 	r.zy = za.y;
 	r.xz = xa.z;
-	r.yz = ya.x;
+	r.yz = ya.z;
 	r.zz = za.z;
 	r.xw = -bari_dot3(xa, eye);
 	r.yw = -bari_dot3(ya, eye);
