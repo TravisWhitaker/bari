@@ -163,6 +163,10 @@ bari_mat2 bari_msum2(bari_mat2 a, bari_mat2 b);
 bari_mat3 bari_msub3(bari_mat3 a, bari_mat3 b);
 bari_mat4 bari_msub4(bari_mat4 a, bari_mat4 b);
 
+bari_mat2 bari_trans2(bari_mat2 a);
+bari_mat3 bari_trans3(bari_mat3 a);
+bari_mat4 bari_trans4(bari_mat4 a);
+
 bari_vec2 bari_vprod2(bari_mat2 m, bari_vec2 v);
 bari_vec3 bari_vprod3(bari_mat3 m, bari_vec3 v);
 bari_vec4 bari_vprod4(bari_mat4 m, bari_vec4 v);
