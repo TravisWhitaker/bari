@@ -6,6 +6,6 @@
 
 void bari_mat2_print(bari_mat2 a)
 {
-	printf("((%f, %f), (%f, %f))", a.xx, a.xy, a.yx, a.yy);
+	printf("((%f, %f)\n (%f, %f))\n\n", a.xx, a.xy, a.yx, a.yy);
 	return;
 }

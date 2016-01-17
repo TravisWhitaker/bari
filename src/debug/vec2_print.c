@@ -6,6 +6,6 @@
 
 void bari_vec2_print(bari_vec2 a)
 {
-	printf("(%f, %f)", a.x, a.y);
+	printf("(%f, %f)\n\n", a.x, a.y);
 	return;
 }
