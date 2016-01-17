@@ -33,8 +33,8 @@ clean:
 	rm -rf $(TESTBIN)
 
 install: all
-	$(INSTALL) $(STATICLIB) $(addsuffix $(STATICLIB),$(LIBTARGET))
-	$(INSTALL) $(HEADERS) $(addsuffix $(HEADERS),$(INCTARGET))
+	$(INSTALL) -DC $(STATICLIB) $(addsuffix $(STATICLIB),$(LIBTARGET))
+	$(INSTALL) -DC $(HEADERS) $(addsuffix $(HEADERS),$(INCTARGET))
 
 test: $(TESTBIN)
 
