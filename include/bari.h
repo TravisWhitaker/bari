@@ -24,6 +24,7 @@ typedef struct
 	float w;
 } bari_vec4;
 
+// matrices are stored in column major order
 typedef struct
 {
 	float xx;
@@ -86,6 +87,23 @@ static const bari_mat4 bari_mat4_id = {1, 0, 0, 0,
                                 0, 1, 0, 0,
                                 0, 0, 1, 0,
                                 0, 0, 0, 1};
+
+// Constructors:
+
+bari_vec2 bari_mkvec2(float x, float y);
+bari_vec3 bari_mkvec3(float x, float y, float z);
+bari_vec4 bari_mkvec4(float x, float y, float z, float w);
+
+// matrices are constructed in row major order
+bari_mat2 bari_mkmat2(float xx, float xy,
+                      float yx, float yy);
+bari_mat3 bari_mkmat3(float xx, float xy, float xz,
+                      float yx, float yy, float yz,
+                      float zx, float zy, float zz);
+bari_mat4 bari_mkmat4(float xx, float xy, float xz, float xw,
+                      float yx, float yy, float yz, float yw,
+                      float zx, float zy, float zz, float zw,
+                      float wx, float wy, float wz, float ww);
 
 // Vector functions:
 
