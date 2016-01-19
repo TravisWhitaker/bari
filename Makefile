@@ -45,5 +45,5 @@ $(OBJECTS): %.o: %.c
 	$(CC) -c $(CFLAGS) $(INCLUDE) -fPIC -o $@ $<
 
 $(TESTBIN): %: %.c
-	$(CC) $(CFLAGS) $(INCLUDE) -o $@ $< $(STATICLIB) 
+	$(CC) $(CFLAGS) $(INCLUDE) -o $@ $< $(STATICLIB)
 	./$*
