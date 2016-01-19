@@ -3,3 +3,4 @@
 *.o
 *.so
 tests/struct_pack_align_test
+tests/vec2_test
