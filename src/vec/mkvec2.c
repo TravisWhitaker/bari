@@ -4,6 +4,6 @@
 
 bari_vec2 bari_mkvec2(float x, float y)
 {
-    bari_vec2 v = {x, y};
-    return v;
+	bari_vec2 v = {x, y};
+	return v;
 }

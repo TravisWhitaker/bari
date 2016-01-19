@@ -6,6 +6,6 @@ bari_mat3 bari_mkmat3(float xx, float xy, float xz,
                       float yx, float yy, float yz,
                       float zx, float zy, float zz)
 {
-    bari_mat3 m = {xx, yx, zx, xy, yy, zy, xz, yz, zz};
-    return m;
+	bari_mat3 m = {xx, yx, zx, xy, yy, zy, xz, yz, zz};
+	return m;
 }
