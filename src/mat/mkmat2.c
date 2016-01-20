@@ -2,6 +2,7 @@
 
 #include <bari.h>
 
+// Row-major constructor for bari_mat2.
 bari_mat2 bari_mkmat2(float xx, float xy,
                       float yx, float yy)
 {

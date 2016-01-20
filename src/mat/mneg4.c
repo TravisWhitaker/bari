@@ -2,6 +2,7 @@
 
 #include <bari.h>
 
+// Element-wise negation on bari_mab4.
 bari_mat4 bari_mneg4(bari_mat4 a)
 {
 	bari_mat4 r;

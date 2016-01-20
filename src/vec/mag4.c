@@ -4,6 +4,7 @@
 
 #include <bari.h>
 
+// Magnitude (length) on bari_vec4.
 float bari_mag4(bari_vec4 a)
 {
 	return sqrtf((a.x * a.x) + (a.y * a.y) + (a.z * a.z) + (a.w * a.w));

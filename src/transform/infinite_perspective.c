@@ -4,6 +4,8 @@
 
 #include <math.h>
 
+// Derive an infinite perspective projection transformation matrix from a
+// field-of-view angle in radians, aspect ratio, and near plane distance.
 // Someone please check this math.
 bari_mat4 bari_infinite_perspective(float fovy, float aspect, float near)
 {

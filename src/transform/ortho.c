@@ -2,6 +2,8 @@
 
 #include <bari.h>
 
+// Derive an orthographic projection transformation matrix from the given
+// left, right, bottom, top, near, and far plane distances from the eye point.
 // Someone please check this math.
 bari_mat4 bari_ortho(float left, float right, float bottom, float top, float near, float far)
 {

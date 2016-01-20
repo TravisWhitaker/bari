@@ -2,6 +2,7 @@
 
 #include <bari.h>
 
+// Multiplication on bari_mat3.
 bari_mat3 bari_mprod3(bari_mat3 a, bari_mat3 b)
 {
 	bari_mat3 r;

@@ -2,6 +2,7 @@
 
 #include <bari.h>
 
+// Element-wise negation on bari_vec4.
 bari_vec4 bari_vneg4(bari_vec4 a)
 {
 	bari_vec4 r;

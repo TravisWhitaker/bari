@@ -4,6 +4,9 @@
 
 #include <math.h>
 
+// Derive a finite perspective projection transformation matrix from the given
+// vertical field-of-view angle in radians, aspect ratio, near plane distance,
+// and far plane distance.
 // Someone please check this math.
 bari_mat4 bari_perspective(float fovy, float aspect, float near, float far)
 {

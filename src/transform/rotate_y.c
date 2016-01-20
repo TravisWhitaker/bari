@@ -4,7 +4,8 @@
 
 #include <math.h>
 
-// The angle is in radians.
+// Derive a rotation transformation matrix for rotation about the y axis from
+// the given theta pseudoeuler angle component.
 bari_mat4 bari_rotate_y(float theta)
 {
 	bari_mat4 r = bari_mat4_id;

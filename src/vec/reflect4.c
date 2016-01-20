@@ -2,7 +2,8 @@
 
 #include <bari.h>
 
-// 'n' must be normalized.
+// Reflection over hyperplanes. Reflect "a" over the hyperplane normal to "n".
+// "n" must be normal.
 bari_vec4 reflect4(bari_vec4 a, bari_vec4 n)
 {
 	bari_vec4 r;

@@ -2,6 +2,7 @@
 
 #include <bari.h>
 
+// Promote a bari_vec3 to bari_vec4 with the supplied w component.
 bari_vec4 bari_promote34(bari_vec3 a, float w)
 {
 	bari_vec4 r;

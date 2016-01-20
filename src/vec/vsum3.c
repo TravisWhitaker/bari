@@ -2,6 +2,7 @@
 
 #include <bari.h>
 
+// Element-wise addition on bari_vec3.
 bari_vec3 bari_vsum3(bari_vec3 a, bari_vec3 b)
 {
 	bari_vec3 r;

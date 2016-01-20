@@ -2,6 +2,7 @@
 
 #include <bari.h>
 
+// Determinant on bari_mat3.
 float bari_det3(bari_mat3 a)
 {
 	return (a.xx * ((a.yy * a.zz) - (a.yz * a.zy)))

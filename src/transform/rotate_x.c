@@ -4,7 +4,8 @@
 
 #include <math.h>
 
-// The angle is in radians.
+// Derive a rotation transformation matrix for rotation about the x axis from
+// the given phi pseudoeuler angle component.
 bari_mat4 bari_rotate_x(float phi)
 {
 	bari_mat4 r = bari_mat4_id;

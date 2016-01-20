@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 
+// Print a string representation of a bari_mat4 to stdout.
 void bari_mat4_print(bari_mat4 a)
 {
 	printf("((%f, %f, %f, %f)\n (%f, %f, %f, %f)\n (%f, %f, %f, %f)\n (%f, %f, %f, %f))\n\n", a.xx, a.xy, a.xz, a.xw, a.yx, a.yy, a.yz, a.yw, a.zx, a.zy, a.zz, a.zw, a.wx, a.wy, a.wz, a.ww);

@@ -2,6 +2,7 @@
 
 #include <bari.h>
 
+// Constructor for bari_vec3.
 bari_vec3 bari_mkvec3(float x, float y, float z)
 {
 	bari_vec3 v = {x, y, z};

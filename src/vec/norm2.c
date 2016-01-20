@@ -4,6 +4,7 @@
 
 #include <bari.h>
 
+// Normalization on bari_vec2.
 bari_vec2 bari_norm2(bari_vec2 a)
 {
 	bari_vec2 r;

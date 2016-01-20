@@ -4,6 +4,7 @@
 
 #include <bari.h>
 
+// Compute the angle between two bari_vec2.
 float bari_angle2(bari_vec2 a, bari_vec2 b)
 {
 	float ma = sqrtf((a.x * a.x) + (a.y * a.y));

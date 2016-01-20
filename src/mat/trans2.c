@@ -2,6 +2,7 @@
 
 #include <bari.h>
 
+// Transposition on bari_mat2.
 bari_mat2 bari_trans2(bari_mat2 a)
 {
 	bari_mat2 r;

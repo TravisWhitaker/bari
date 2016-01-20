@@ -2,6 +2,7 @@
 
 #include <bari.h>
 
+// Element-wise addition on bari_mat2.
 bari_mat2 bari_msum2(bari_mat2 a, bari_mat2 b)
 {
 	bari_mat2 r;

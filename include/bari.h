@@ -3,12 +3,14 @@
 #ifndef BARI_H
 #define BARI_H
 
+// Two-component vector.
 typedef struct
 {
 	float x;
 	float y;
 } bari_vec2;
 
+// Three-component vector.
 typedef struct
 {
 	float x;
@@ -16,6 +18,7 @@ typedef struct
 	float z;
 } bari_vec3;
 
+// Four-component vector.
 typedef struct
 {
 	float x;
@@ -24,7 +27,7 @@ typedef struct
 	float w;
 } bari_vec4;
 
-// matrices are stored in column major order
+// Two-by-two matrix stored in OpenGL-native column-major order.
 typedef struct
 {
 	float xx;
@@ -33,6 +36,7 @@ typedef struct
 	float yy;
 } bari_mat2;
 
+// Three-by-three matrix stored in OpenGL-native column-native order.
 typedef struct
 {
 	float xx;
@@ -46,6 +50,7 @@ typedef struct
 	float zz;
 } bari_mat3;
 
+// Four-by-four matrix stored in OpenGL-native column-native order.
 typedef struct
 {
 	float xx;
@@ -79,22 +84,23 @@ static const bari_mat4 bari_mat4_zero = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 // Identity matrices:
 
 static const bari_mat2 bari_mat2_id = {1, 0,
-                                0, 1};
+                                       0, 1};
 static const bari_mat3 bari_mat3_id = {1, 0, 0,
-                                0, 1, 0,
-                                0, 0, 1};
+                                       0, 1, 0,
+                                       0, 0, 1};
 static const bari_mat4 bari_mat4_id = {1, 0, 0, 0,
-                                0, 1, 0, 0,
-                                0, 0, 1, 0,
-                                0, 0, 0, 1};
+                                       0, 1, 0, 0,
+                                       0, 0, 1, 0,
+                                       0, 0, 0, 1};
 
-// Constructors:
+// Vector constructors:
 
 bari_vec2 bari_mkvec2(float x, float y);
 bari_vec3 bari_mkvec3(float x, float y, float z);
 bari_vec4 bari_mkvec4(float x, float y, float z, float w);
 
-// matrices are constructed in row major order
+// Row-=major matrix constructors:
+
 bari_mat2 bari_mkmat2(float xx, float xy,
                       float yx, float yy);
 bari_mat3 bari_mkmat3(float xx, float xy, float xz,

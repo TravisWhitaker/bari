@@ -2,6 +2,7 @@
 
 #include <bari.h>
 
+// Element-wise scaling on a bari_mat3.
 bari_mat3 bari_mscale3(bari_mat3 a, float b)
 {
 	bari_mat3 r;

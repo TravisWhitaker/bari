@@ -2,6 +2,7 @@
 
 #include <bari.h>
 
+// Element-wise scaling on bari_vec2.
 bari_vec2 bari_vscale2(bari_vec2 a, float b)
 {
 	bari_vec2 r;

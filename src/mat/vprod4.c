@@ -2,6 +2,7 @@
 
 #include <bari.h>
 
+// Matrix-vector product on bari_mat4 * bari_vec4.
 bari_vec4 bari_vprod4(bari_mat4 m, bari_vec4 v)
 {
 	bari_vec4 r;

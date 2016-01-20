@@ -2,6 +2,7 @@
 
 #include <bari.h>
 
+// Cross product on bari_vec3.
 bari_vec3 bari_cross(bari_vec3 a, bari_vec3 b)
 {
 	bari_vec3 r;

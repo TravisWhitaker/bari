@@ -2,6 +2,7 @@
 
 #include <bari.h>
 
+// Element-wise multiplication on bari_vec2.
 bari_vec2 bari_vmul2(bari_vec2 a, bari_vec2 b)
 {
 	bari_vec2 r;

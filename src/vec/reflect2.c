@@ -2,7 +2,8 @@
 
 #include <bari.h>
 
-// 'n' must be normalized.
+// Reflection over lines. Reflect "a" over the line normal to "n". "n" must be
+// normal.
 bari_vec2 reflect2(bari_vec2 a, bari_vec2 n)
 {
 	bari_vec2 r;

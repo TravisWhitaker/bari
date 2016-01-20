@@ -2,6 +2,7 @@
 
 #include <bari.h>
 
+// Determinant on bari_mat4.
 // This is slow. Subdeterminants are shared, and the variable names come from
 // this element labeling:
 //

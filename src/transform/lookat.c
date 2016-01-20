@@ -2,6 +2,12 @@
 
 #include <bari.h>
 
+// Derive a camera transformation matrix from an eye position vector,
+// field-of-view center vector, and field-of-view orientation. Intuitively, the
+// "eye" vector is the location of the camera in the world, the "center" vector
+// is the direction the camera is pointing towards, and the camera is rotated
+// around the "center" axis such that the "up" vector is pointing up in the
+// frame.
 // Someone please check this math.
 bari_mat4 bari_lookat(bari_vec3 eye, bari_vec3 center, bari_vec3 up)
 {

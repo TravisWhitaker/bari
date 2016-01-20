@@ -4,6 +4,7 @@
 
 #include <bari.h>
 
+// Distance between two bari_vec4.
 float bari_dist4(bari_vec4 a, bari_vec4 b)
 {
 	float x = a.x - b.x;

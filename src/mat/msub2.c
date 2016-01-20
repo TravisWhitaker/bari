@@ -2,6 +2,7 @@
 
 #include <bari.h>
 
+// Element-wise subtraction on bari_mat2.
 bari_mat2 bari_msub2(bari_mat2 a, bari_mat2 b)
 {
 	bari_mat2 r;
