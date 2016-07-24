@@ -1,5 +1,5 @@
 # bari
-Simple Low-Level OpenGL Utility Library
+Low-Level Graphics Mathematics Library
 
 # Note To Contributors
 This library is intended to be linked statically. Therefore, with the exception
