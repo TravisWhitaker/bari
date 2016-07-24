@@ -2,6 +2,8 @@
 
 module Main where
 
+import Control.Monad
+
 import Development.Shake
 import Development.Shake.FilePath
 import Development.Shake.Util
@@ -27,9 +29,11 @@ main = shakeArgs (shakeOptions {shakeThreads = 0}) $ do
                                          , "//*.m"
                                          ]
 
-    phony "test" $ map (-<.> ".test")
-               <$> getDirectoryFiles "" ["tests//*.c"]
-               >>= need
+    phony "test" $ do
+        ss <- getDirectoryFiles "" ["tests//*.c"]
+        let ts = map (-<.> ".test") ss
+        need ts
+        mapM_ (\t -> unit (command [] t [])) ts
 
     phony "install" $ do
         hs <- getDirectoryFiles "" ["include/*.h"]
@@ -64,7 +68,6 @@ main = shakeArgs (shakeOptions {shakeThreads = 0}) $ do
                                              , m
                                              ]
                                            ]
-        unit $ command [] o []
         needMakefileDependencies m
 
     "src//*.o" %> \o -> do
